@@ -1,0 +1,516 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: black;
+}
+
+header nav div .foto-inicio {
+  max-width: 70px;
+  border-radius: 50%;
+  border: solid 3px white;
+
+}
+
+header nav div .foto-inicio:hover {
+  max-width: 70px;
+  border-radius: 50%;
+  border: solid 3px #68E717;
+}
+
+header nav div .navbar-toggler {
+  border: none;
+}
+
+header nav div #navbar-botons {
+  color: white;
+  transition: 0.5s;
+}
+
+header nav div #navbar-botons:hover {
+  color: #68E717;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/*me resta meter esto, no lo hice porque me rompe un cambio que hice*/
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28104, 231, 23, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+main {
+  background: black;
+  margin-bottom: 0;
+  min-height: 100%;
+  /* Estilos iniciales para el div */
+}
+
+main .image-transition {
+  width: 100%;
+  height: 350px;
+  background-color: black;
+  /* Color inicial */
+  color: #68E717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main .image-transition h6 {
+  overflow: hidden;
+  /* Esconde el texto que no está "escrito" aún */
+  border-right: 0.15em solid black;
+  /* Barra para simular el cursor */
+  white-space: nowrap;
+  /* Evita que el texto se divida en varias líneas */
+  text-align: center;
+  margin: 0 auto;
+  /* Centra el texto */
+  letter-spacing: 0.15em;
+  /* Espaciado entre letras */
+  animation: typing 5s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+main .image-transition::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../imagenes/banner overol.png");
+  /* Reemplaza esto con la ruta de tu imagen */
+  background-size: cover;
+  /* Asegura que la imagen cubra todo el div */
+  background-position: center;
+  /* Centra la imagen */
+  clip-path: circle(0% at 10% 10%);
+  transition: clip-path 0.3s ease;
+  pointer-events: none;
+  /* Permite que los eventos del mouse pasen a través de este pseudo-elemento */
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  70% {
+    width: 100%;
+  }
+
+  85% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+main .image-transition:hover::before {
+  clip-path: circle(50% at var(--x) var(--y));
+}
+
+main .image-transition:hover {
+  cursor: none;
+  /* Oculta el cursor para una mejor experiencia visual */
+}
+
+main .image-transition {
+  --x: 50%;
+  --y: 50%;
+}
+
+main .image-transition:hover {
+  cursor: none;
+  /* Oculta el cursor */
+}
+
+main .image-transition {
+  --x: 50%;
+  --y: 50%;
+}
+
+main .image-transition:hover::before {
+  clip-path: circle(50% at var(--x) var(--y));
+}
+
+main .image-transition {
+  --x: 50%;
+  --y: 50%;
+}
+
+main .image-transition:hover {
+  cursor: none;
+  /* Oculta el cursor */
+}
+
+main .que-es-overol {
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 3%;
+  margin-bottom: 4%;
+}
+
+main .que-es-overol h2 span {
+  transition: 0.5s;
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+main .que-es-overol h2 span:hover {
+  color: #68E717;
+  margin: 3px;
+}
+
+main div div div h4 {
+  font-size: 150%;
+  color: white;
+}
+
+main div div div #ilustracion {
+  max-width: 100%;
+  margin-top: 2%;
+}
+
+main div div div #parrafo1y2 {
+  margin-top: 0.4rem;
+}
+
+main div div div p {
+  font-size: 70%;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  padding-top: 5%;
+}
+
+footer nav ul {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+footer nav ul .foto-pie {
+  max-width: 50px;
+  border-radius: 50%;
+  border: solid 3px white;
+  transition: 0.5s;
+}
+
+footer nav ul .foto-pie:hover {
+  max-width: 60px;
+  border: solid 3px #68E717;
+}
+
+footer nav ul li a {
+  font-size: 15px;
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer nav ul li a:hover {
+  color: #68E717;
+  margin: 15px;
+}
+
+main div div #ofeyrafa {
+  display: flex;
+  justify-content: end;
+}
+
+main div div #ofeyrafa #fotous {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+main div div div .parrafous {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  max-width: 100%;
+}
+
+main div div div #logo-overol {
+  max-width: 55%;
+  border-radius: 5px;
+  display: flex;
+}
+
+main div div {
+  color: white;
+}
+
+main div div div div .form-label1 {
+  margin-top: 5%;
+}
+
+main div div div div #exampleFormControlInput1 {
+  margin: 6px;
+}
+
+main div div div div .form-label2 {
+  margin-top: 1%;
+}
+
+main div div div div #exampleFormControlTextarea1 {
+  margin: 6px;
+}
+
+main div div div #nuestras-redes {
+  margin-top: 5%;
+}
+
+main div div div #logos-contacto {
+  display: flex;
+  justify-content: center;
+}
+
+main div div div #logos-contacto a img {
+  margin: 7px;
+  max-width: 50px;
+  transition: 0.5s;
+}
+
+main div div div #logos-contacto a img:hover {
+  transform: scale(1.2);
+}
+
+main div div div #donde {
+  margin-top: 5%;
+}
+
+main div div div iframe {
+  margin-top: 7px;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 50%;
+}
+
+main div h3 {
+  color: white;
+  margin-bottom: 7%;
+  text-align: center;
+  font-weight: lighter;
+}
+
+main section div div div .h4-izq {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  transform: translateX(12px);
+}
+
+main section div div div .ul-izq li {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  list-style: none;
+}
+
+main section div div div h4 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main section div div div .ul-der li {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  list-style: none;
+  transform: translateX(-12px);
+}
+
+main .ver-proyectos {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+main .ver-proyectos a {
+  color: #68E717;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+main .ver-proyectos a:hover {
+  transform: scale(1.5);
+}
+
+main .boton-enviar {
+  display: flex;
+  background-color: white;
+  padding: 5px;
+  display: inline;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+main .boton-enviar:hover {
+  padding: 7px;
+  background-color: #68E717;
+  font-size: 1.1rem;
+}
+
+main .boton-enviar a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 762px) {
+  header nav div .foto-inicio {
+    max-width: 50px;
+  }
+
+  main .image-transition {
+    width: 100%;
+    /* 90% del ancho de la ventana */
+    height: 30vh;
+    /* 30% de la altura de la ventana */
+    background-color: transparent;
+    /* Fondo transparente para mostrar la imagen */
+  }
+
+  main .image-transition::before {
+    clip-path: none;
+    /* Elimina el clip-path para mostrar toda la imagen */
+    transition: none;
+    /* Elimina la transición */
+  }
+
+  main .image-transition:hover::before {
+    clip-path: none;
+    /* Desactiva el clip-path */
+  }
+
+  main .image-transition:hover {
+    cursor: default;
+    /* Restablece el cursor */
+  }
+
+  footer nav ul li a {
+    font-size: 10px;
+  }
+
+  .foto-enc {
+    margin-top: 10px;
+  }
+
+  .alianza360 {
+    transform: translateY(-100px);
+  }
+}
+
+main nav h5 {
+  margin-left: 4%;
+  margin-bottom: 3%;
+  color: white;
+}
+
+main nav div div div:first-child h6 {
+  color: #68E717;
+  text-align: left;
+}
+
+main nav div div div:first-child p {
+  font-size: 13px;
+  margin-top: 70px;
+  text-align: left;
+}
+
+main nav div div div:nth-child(2) .remera {
+  box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -webkit-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -moz-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  width: 100%;
+  border-radius: 5px;
+}
+
+main nav div div div:last-child .foto-enc {
+  box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -webkit-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -moz-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  width: 100%;
+  border-radius: 5px;
+}
+
+main nav h5 {
+  margin-top: 50px;
+}
+
+main nav div div div p {
+  font-size: 13px;
+  margin-top: 70px;
+  text-align: left;
+}
+
+main nav div div div .lavandera,
+main nav div div div .nylon {
+  box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -webkit-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -moz-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+main nav div div div p {
+  margin-top: 0px;
+  font-size: 13px;
+  text-align: left;
+}
+
+main nav div div div .alianza360 {
+  margin-top: 100px;
+  box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -webkit-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  -moz-box-shadow: 4px 14px 95px -13px rgba(104, 231, 23, 0.74);
+  width: 100%;
+  border-radius: 5px;
+}
