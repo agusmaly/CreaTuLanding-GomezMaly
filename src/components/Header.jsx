@@ -1,4 +1,6 @@
 import React from 'react'
+import overolImage from '../imagenes/overol.jpg';
+
 
 const Header = () => {
     return (
@@ -7,7 +9,7 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-black">
                     <div className="container-fluid">
                         <a href="index.html">
-                            <img class="foto-inicio" src="../imagenes/overol.jpg" alt="overol header" />
+                            <img className="foto-inicio" src={overolImage} alt="overol header" />
                         </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"

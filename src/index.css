@@ -22,6 +22,7 @@ header nav div .foto-inicio {
   border-radius: 50%;
   border: solid 3px white;
 
+
 }
 
 header nav div .foto-inicio:hover {
@@ -98,7 +99,7 @@ main .image-transition::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../imagenes/banner overol.png");
+  background-image: url("./imagenes/banner overol.png");
   /* Reemplaza esto con la ruta de tu imagen */
   background-size: cover;
   /* Asegura que la imagen cubra todo el div */
