@@ -25,7 +25,7 @@ export const styles = {
     padding: "5px 10px",
     fontSize: "16px",
     fontWeight: "bold",
-    backgroundColor: "#007bff",
+    backgroundColor: "#000000",
     color: "#fff",
     border: "none",
     borderRadius: "5px",
@@ -33,7 +33,7 @@ export const styles = {
     outline: "none",
   },
   disabledButton: {
-    backgroundColor: "#ccc",
+    backgroundColor: "#000000",
     cursor: "not-allowed",
   },
   counter: {
@@ -51,5 +51,17 @@ export const styles = {
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
+  },
+
+  addButton: {
+    marginTop: "10px",
+    padding: "10px 15px",
+    fontSize: "16px",
+    backgroundColor: "#28a745",
+    color: "#fff",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+
   },
 };
