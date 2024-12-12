@@ -19,7 +19,6 @@ const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.title}>Camisa Tiger</h2>
 
       <div style={styles.counterContainer}>
         {/* Botón de Decrementar */}
