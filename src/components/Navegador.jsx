@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import mermeladaImage from '../imagenes/mermelada.jpeg';
 import ilustracionImage from '../imagenes/ilustracionpala.jpg';
 import animacionVideo from '../imagenes/animacion.mp4';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Main = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Duración de la animación
+            once: true,     // La animación ocurre solo una vez
+        });
+    }, []);
     return (
         <main>
             <div className="image-transition">
