@@ -18,6 +18,7 @@ const Header = () => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav ms-auto" id="detalle-menu">
+                                <a className="nav-link" href="html/tienda.html" id="navbar-botons">Tienda</a>
                                 <a className="nav-link" href="html/servicios.html" id="navbar-botons">Servicios</a>
                                 <a className="nav-link" href="html/proyectos.html" id="navbar-botons">Proyectos</a>
                                 <a className="nav-link" href="html/nosotros.html" id="navbar-botons">Nosotros</a>

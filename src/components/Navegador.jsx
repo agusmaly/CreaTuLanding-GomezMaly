@@ -9,7 +9,7 @@ const Main = () => {
     useEffect(() => {
         AOS.init({
             duration: 1000, // Duración de la animación
-            once: true,     // La animación ocurre solo una vez
+            once: false,     // La animación ocurre siempre que scrollee
         });
     }, []);
     return (
