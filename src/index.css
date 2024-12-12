@@ -501,6 +501,12 @@ main nav div div div .nylon {
   margin-bottom: 20px;
 }
 
+main h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
 main nav div div div p {
   margin-top: 0px;
   font-size: 13px;
@@ -587,7 +593,7 @@ main nav div div div .alianza360 {
 }
 
 .producto {
-  background-color: #f0571b;
+  background-color: #353535;
   margin-bottom: 2rem;
   border-radius: 0;
 }
@@ -621,4 +627,28 @@ main nav div div div .alianza360 {
 .texto-producto .precio {
   font-size: 2.8rem;
   font-weight: 900;
+}
+
+.btn {
+  background-color: #222222;
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color 0.3s ease-out;
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #68E717;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: auto;
+  }
 }

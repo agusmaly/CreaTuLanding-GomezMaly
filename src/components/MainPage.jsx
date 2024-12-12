@@ -7,7 +7,7 @@ const MainPage = () => {
   return (
     <>
       <main className="contenido-principal contenedor">
-        <h2 className="text-center">Nuestros Michis</h2>
+        <h2 className="text-center">Algo de la tienda...</h2>
 
         <div className="listado-productos">
           <div className="producto">
