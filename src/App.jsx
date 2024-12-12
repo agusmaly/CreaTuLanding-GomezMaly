@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Navegador from './components/Navegador'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -10,9 +11,7 @@ function App() {
     <>
       <Header />
       <Navegador />
-
-
-
+      <Footer />
     </>
   )
 }
