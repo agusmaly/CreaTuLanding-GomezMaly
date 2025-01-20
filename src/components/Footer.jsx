@@ -1,4 +1,43 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import overolImage from '../imagenes/overol.jpg';
+
+const Footer = () => {
+    return (
+        <footer>
+            <nav className="container-fluid">
+                <ul className="footer-menu">
+                    <li>
+                        <Link to="/mainPage" className="footer-link">Tienda</Link>
+                    </li>
+                    <li>
+                        <Link to="/servicios" className="footer-link">Servicios</Link>
+                    </li>
+                    <li>
+                        <Link to="/proyectos" className="footer-link">Proyectos</Link>
+                    </li>
+                    <li>
+                        <Link to="/nosotros" className="footer-link">Nosotros</Link>
+                    </li>
+                    <li>
+                        <Link to="/contacto" className="footer-link">Contacto</Link>
+                    </li>
+                    <li>
+                        <Link to="/">
+                            <img className="foto-pie" src={overolImage} alt="Logo de Overol - Inicio" />
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    );
+};
+
+export default Footer;
+
+
+
+/*import React from 'react'
 import overolImage from '../imagenes/overol.jpg';
 
 const Footer = () => {
@@ -7,13 +46,14 @@ const Footer = () => {
             <footer>
                 <nav class="container-fluid">
                     <ul>
-                        <li><a href="../html/servicios.html">Servicios</a></li>
-                        <li><a href="../html/proyectos.html">Proyectos</a></li>
-                        <a href="index.html">
-                            <img class="foto-pie" src={overolImage} alt="overol footer" />
-                        </a>
-                        <li><a href="../html/nosotros.html">Nosotros</a></li>
-                        <li><a href="../html/contacto.html">Contacto</a></li>
+                        <li><Link to="/mainPage">Tienda</Link></li>
+                        <li><Link to="/servicios">Servicios</Link></li>
+                        <li><Link to="/proyectos">Proyectos</Link></li>
+                        <Link to="/">
+                            <img className="foto-pie" src={overolImage} alt="overol footer" />
+                        </Link>
+                        <li><Link to="/nosotros">Nosotros</Link></li>
+                        <li><Link to="/contacto">Contacto</Link></li>
                     </ul>
                 </nav>
             </footer>
@@ -21,4 +61,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer*/
