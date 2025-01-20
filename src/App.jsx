@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import MainPage from './components/MainPage'
 import Servicios from './components/Servicios'
 import Proyectos from './components/Proyectos'
+import Nosotros from './components/Nosotros'
+import Contacto from './components/Contacto'
 
 
 function App() {
@@ -18,7 +20,10 @@ function App() {
       <MainPage />
       <Servicios />
       <Proyectos />
+      <Nosotros />
+      <Contacto />
       <Footer />
+
     </>
   )
 }
