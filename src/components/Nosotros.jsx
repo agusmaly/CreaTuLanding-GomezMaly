@@ -6,7 +6,7 @@ const Nosotros = () => {
     return (
         <main>
             <div className="image-transition">
-                <h6>Knock, knock, Neo.</h6>
+                <h6>Blue pill or red pill</h6>
             </div>
 
             <div className="animate__animated animate__flash que-es-overol">

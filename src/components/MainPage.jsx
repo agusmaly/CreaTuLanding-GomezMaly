@@ -20,8 +20,20 @@ const MainPage = () => {
   return (
     <>
       <main className="contenido-principal contenedor">
-        <h2 className="text-center">Algo de la tienda...</h2>
+        <div className="image-transition">
+          <h6>The Matrix has you...</h6>
+        </div>
 
+        <div className="animate__animated animate__flash que-es-overol">
+          <h2>
+            <span>T</span>
+            <span>i</span>
+            <span>e</span>
+            <span>n</span>
+            <span>d</span>
+            <span>a</span>
+          </h2>
+        </div>
         <div className="listado-productos">
           <div className="producto">
             <img src={img1} alt="Imagen producto" />

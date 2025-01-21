@@ -4,7 +4,7 @@ const Servicios = () => {
     return (
         <main>
             <div className="image-transition">
-                <h6>The Matrix has you...</h6>
+                <h6>Follow the white rabbit.</h6>
             </div>
 
             <div className="animate__animated animate__flash que-es-overol">
