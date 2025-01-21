@@ -4,6 +4,7 @@ import ilustracionImage from '../imagenes/ilustracionpala.jpg';
 import animacionVideo from '../imagenes/animacion.mp4';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
     useEffect(() => {
@@ -96,8 +97,8 @@ const Main = () => {
                 </div>
             </div>
             <div className="ver-proyectos">
+                <Link className="nav-link" to="/proyectos">[+]</Link>
 
-                <a href="./html/proyectos.html">[+]</a>
             </div>
         </main>
     );
