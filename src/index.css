@@ -35,16 +35,18 @@ header nav div .navbar-toggler {
   border: none;
 }
 
-header nav div #navbar-botons {
+header nav div div div .nav-link {
   color: white;
   transition: 0.5s;
 }
 
-header nav div #navbar-botons:hover {
+header nav div div div .nav-link:hover {
   color: #68E717;
   margin-left: 15px;
   margin-right: 15px;
 }
+
+
 
 /*me resta meter esto, no lo hice porque me rompe un cambio que hice*/
 .navbar-dark .navbar-toggler-icon {

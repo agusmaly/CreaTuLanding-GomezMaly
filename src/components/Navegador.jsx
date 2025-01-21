@@ -96,6 +96,7 @@ const Main = () => {
                 </div>
             </div>
             <div className="ver-proyectos">
+
                 <a href="./html/proyectos.html">[+]</a>
             </div>
         </main>
