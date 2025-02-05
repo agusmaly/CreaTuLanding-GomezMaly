@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import img1 from '../imagenes/remera.jpeg'
 import img2 from '../imagenes/fotoenciende.jpeg'
 import img3 from '../imagenes/tolosa.jpeg'
@@ -10,6 +10,14 @@ import img7 from '../imagenes/alianza360.jpeg'
 
 
 const Proyectos = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Duración de la animación
+            once: false,     // La animación ocurre siempre que scrollee
+        });
+    }, []);
+
     return (
         <main>
             <div className="image-transition">

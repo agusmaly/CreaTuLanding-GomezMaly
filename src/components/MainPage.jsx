@@ -3,6 +3,10 @@ import img2 from '../imagenes/ilustracionpala.jpg';
 import img3 from '../imagenes/tolosa-zoom.jpeg';
 import ItemCount from './ItemCount';
 import Swal from 'sweetalert2';
+import React, { useEffect } from 'react';
+
+
+
 
 const MainPage = () => {
   const handleAddToCart = (count, productName) => {
@@ -16,6 +20,7 @@ const MainPage = () => {
     // Aquí puedes manejar la lógica para añadir al carrito
     console.log(`Añadido ${count} de ${productName} al carrito.`);
   };
+
 
   return (
     <>

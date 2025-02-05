@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import img1 from '../imagenes/ofeyrafa2.jpeg';
 import img2 from '../imagenes/LOGO-OVEROL.jpeg';
 
+
+
 const Nosotros = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Duración de la animación
+            once: false,     // La animación ocurre siempre que scrollee
+        });
+    }, []);
+
     return (
         <main>
             <div className="image-transition">

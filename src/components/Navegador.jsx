@@ -13,6 +13,8 @@ const Main = () => {
             once: false,     // La animación ocurre siempre que scrollee
         });
     }, []);
+
+
     return (
         <main>
             <div className="image-transition">

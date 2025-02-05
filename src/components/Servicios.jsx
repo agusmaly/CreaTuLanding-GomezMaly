@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+
 
 const Servicios = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Duración de la animación
+            once: false,     // La animación ocurre siempre que scrollee
+        });
+    }, []);
+
     return (
         <main>
             <div className="image-transition">

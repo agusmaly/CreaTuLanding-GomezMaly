@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import imgWhatsapp from '../imagenes/whatsapp_5968841.png';
 import imgInstagram from '../imagenes/instagram_3955024.png';
 import imgBehance from '../imagenes/behance_3670094.png';
 
+
 const Contacto = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Duración de la animación
+            once: false,     // La animación ocurre siempre que scrollee
+        });
+    }, []);
+
     return (
         <main>
             <div className="image-transition">
