@@ -1,7 +1,7 @@
 import img1 from '../imagenes/revolutionGrano333.jpg';
 import img2 from '../imagenes/ilustracionpala.jpg';
 import img3 from '../imagenes/tolosa-zoom.jpeg';
-import ItemCount from './ItemCount';
+import ItemCount from '../components/ItemCount';
 import Swal from 'sweetalert2';
 import React, { useEffect } from 'react';
 

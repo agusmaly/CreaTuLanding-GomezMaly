@@ -1,15 +1,16 @@
-import { useUser } from "./components/context/UserContext";
-import Header from './components/Header'
-import Navegador from './components/Navegador'
-import Footer from './components/Footer'
-import MainPage from './components/MainPage'
-import Servicios from './components/Servicios'
-import Proyectos from './components/Proyectos'
-import Nosotros from './components/Nosotros'
-import Contacto from './components/Contacto'
+import { useUser } from "./context/UserContext";
+import Header from './page/Header'
+import Navegador from './page/Navegador'
+import Footer from './page/Footer'
+import MainPage from './page/MainPage'
+import Servicios from './page/Servicios'
+import Proyectos from './page/Proyectos'
+import Nosotros from './page/Nosotros'
+import Contacto from './page/Contacto'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import BannerGatos from './components/BannerGatos'
 import { useEffect } from "react";
+
 
 
 

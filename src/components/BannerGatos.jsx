@@ -27,30 +27,4 @@ const BannerGatos = () => {
 export default BannerGatos;
 
 
-// import { useEffect } from 'react';
 
-// const ImageTransitionEffect = () => {
-//     useEffect(() => {
-//         const imageTransition = document.querySelector('.image-transition');
-
-//         if (!imageTransition) return; // Evita errores si el elemento no está en el DOM
-
-//         const handleMouseMove = (e) => {
-//             const rect = e.target.getBoundingClientRect();
-//             const x = e.clientX - rect.left;
-//             const y = e.clientY - rect.top;
-//             e.target.style.setProperty('--x', `${x}px`);
-//             e.target.style.setProperty('--y', `${y}px`);
-//         };
-
-//         imageTransition.addEventListener('mousemove', handleMouseMove);
-
-//         return () => {
-//             imageTransition.removeEventListener('mousemove', handleMouseMove);
-//         };
-//     }, []);
-
-//     return null; // No renderiza nada, solo maneja el efecto
-// };
-
-// export default ImageTransitionEffect;
