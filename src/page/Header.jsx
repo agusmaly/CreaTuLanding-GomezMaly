@@ -1,8 +1,31 @@
+import {
+    addDoc,
+    collection,
+    deleteDoc,
+    doc,
+    getDoc,
+    getDocs,
+    query,
+    updateDoc,
+    where,
+    writeBatch,
+} from "firebase/firestore/lite";
+import { db } from "../config/firebaseConfig";
 import React from 'react';
 import { Link } from 'react-router-dom';
 import overolImage from '../imagenes/overol.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useUser } from "../context/UserContext.jsx";
+import productos from "../service/productos.js";
+
+const buttonStyle = {
+    padding: "10px 20px",
+    backgroundColor: "blue",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+};
 
 
 
@@ -18,6 +41,19 @@ const Header = () => {
         } else {
             Login({ name: "Mariano", isLoggedIn: true });
             console.log("Usuario logueado");
+        }
+    };
+
+
+    const cargarProducts = async () => {
+        try {
+            const productRef = collection(db, "Ilustraciones"); // referencia a la coleccion
+            for (const product of productos) {
+                await addDoc(productRef, product); // agrega cada producto como un documento
+            }
+            console.log("Productos cargados existosamente en Firestore");
+        } catch (error) {
+            console.log("Error al cargar los productos :", error);
         }
     };
 
@@ -42,20 +78,36 @@ const Header = () => {
                 </button>
 
                 {user?.isLoggedIn && (
-                    <p
-                        style={{
-                            position: "absolute",
-                            textAlign: "center",
-                            top: "20px",
-                            right: "44%",
-                            color: "#68E717",
-                        }}
-                    >
-                        Bienvenido {user?.name}
-                    </p>
+                    <>
+                        <p
+                            style={{
+                                position: "absolute",
+                                textAlign: "center",
+                                top: "20px",
+                                right: "44%",
+                                color: "#68E717",
+                            }}
+                        >
+                            Bienvenido {user?.name}
+                        </p>
+                        <div>
+                            {/* CARGAR PRODUCTOS */}
+                            <button
+                                onClick={cargarProducts}
+                                style={{
+                                    ...buttonStyle,
+                                    marginLeft: "5px",
+                                    backgroundColor: "blue",
+                                    color: "white",
+                                }}
+                            >
+                                Cargar productos a Firestore
+                            </button>
+                        </div>
+                    </>
                 )}
 
-                <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
                     <div className="container-fluid">
                         <Link to="/">
                             <img className="foto-inicio" src={overolImage} alt="Logo de Overol - Volver al inicio" />
