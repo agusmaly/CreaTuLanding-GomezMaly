@@ -406,6 +406,13 @@ main .boton-enviar a {
   text-decoration: none;
 }
 
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 30vh; Ajusta esto si deseas centrar solo en el viewport */
+}
+
 /* ESTILOS DEL CART */
 .cart {
   padding: 20px;
@@ -413,7 +420,7 @@ main .boton-enviar a {
   border-radius: 10px;
   background-color: black;
   width: 50%;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 20px;
 
 }
