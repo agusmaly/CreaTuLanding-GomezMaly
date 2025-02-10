@@ -17,6 +17,8 @@ import { useEffect } from "react";
 function App() {
   const { user } = useUser();
   console.log('user :', user);
+  const testEnv = import.meta.env.VITE_test;
+  console.log('Variable de entorno: ', testEnv);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
