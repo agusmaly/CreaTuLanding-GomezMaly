@@ -24,7 +24,9 @@ const MainPage = () => {
 
   return (
     <>
+
       <main className="contenido-principal contenedor">
+
         <div className="image-transition">
           <h6>The Matrix has you...</h6>
         </div>
@@ -40,6 +42,14 @@ const MainPage = () => {
           </h2>
         </div>
 
+        {/* CONDICIONAL PARA MOSTRAR EL CART */}
+        {
+          cart.length > 0 && (
+            <div className='align-center'>
+              <Cart />
+            </div>
+          )
+        }
 
         {
           loading ? (
@@ -65,14 +75,7 @@ const MainPage = () => {
           )
         }
 
-        {/* CONDICIONAL PARA MOSTRAR EL CART */}
-        {
-          cart.length > 0 && (
-            <div className='align-center'>
-              <Cart />
-            </div>
-          )
-        }
+
 
       </main>
     </>

@@ -44,7 +44,7 @@ const Header = () => {
         }
     };
 
-
+    //CARGAR PRODUCTOS
     const cargarProducts = async () => {
         try {
             const productRef = collection(db, "Ilustraciones"); // referencia a la coleccion
@@ -54,6 +54,62 @@ const Header = () => {
             console.log("Productos cargados existosamente en Firestore");
         } catch (error) {
             console.log("Error al cargar los productos :", error);
+        }
+    };
+
+    //ACTUALIZAR CON BATCH
+    const uploadBatchProductos = async () => {
+        try {
+            const batch = writeBatch(db); // Crea una instancia de batch
+            const productRef = collection(db, "Ilustraciones");
+            const snapshot = await getDocs(productRef);
+
+            snapshot.forEach((docSnap) => {
+                const docRef = docSnap.ref; // Obtiene referencia al documento
+                batch.update(docRef, { amigables: true }); // Agrega la operación de actualización al batch
+            });
+
+            await batch.commit(); // Ejecuta todas las operaciones
+            console.log("Productos actualizados exitosamente con batch");
+        } catch (error) {
+            console.log("Error al actualizar los productos con batch:", error);
+        }
+    };
+
+    // ELIMINAR TODOS CON BATCH
+    const deleteAllProducts = async () => {
+        try {
+            const batch = writeBatch(db); // Crea un batch para operaciones atómicas
+            const productsRef = collection(db, "Ilustraciones"); // Referencia a la colección
+            const snapshot = await getDocs(productsRef); // Obtener todos los documentos
+
+            snapshot.forEach((docSnap) => {
+                batch.delete(docSnap.ref); // Agregar la eliminación de cada documento al batch
+            });
+
+            await batch.commit(); // Ejecuta todas las eliminaciones
+            console.log("Todos los productos han sido eliminados con batch.");
+        } catch (error) {
+            console.error("Error al eliminar los productos con batch:", error);
+        }
+    };
+
+    // Obtener productos cuyo precio sea mayor a $9000.
+    const getExpensiveProducts = async () => {
+        try {
+            const productsRef = collection(db, "Ilustraciones"); // Referencia a la colección
+            const q = query(productsRef, where("price", ">", 9000)); // Consulta con condición
+            const snapshot = await getDocs(q); // Obtener los documentos que cumplen con la condición
+
+            // Mapeamos los resultados
+            const expensiveProducts = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+
+            console.log("Productos caros:", expensiveProducts);
+        } catch (error) {
+            console.error("Error al obtener productos caros:", error);
         }
     };
 
@@ -103,7 +159,36 @@ const Header = () => {
                             >
                                 Cargar productos a Firestore
                             </button>
+                            {/* ACTUALIZAR BATCH */}
+                            <button
+                                onClick={uploadBatchProductos}
+                                style={{
+                                    ...buttonStyle,
+                                    marginLeft: "5px",
+                                    backgroundColor: "yellow",
+                                    color: "black",
+                                }}
+                            >
+                                Actualizar productos con Batch Firestore
+                            </button>
+                            {/* DELETE CON BATCH */}
+                            <button
+                                onClick={deleteAllProducts}
+                                style={{
+                                    ...buttonStyle,
+                                    margin: "5px",
+                                    backgroundColor: "red",
+                                    color: "black",
+                                }}
+                            >
+                                Eliminar todos los productos con Batch
+                            </button>
+                            {/* SENTENCIAS DE QUERY Y WHERE */}
+                            <button onClick={getExpensiveProducts} style={buttonStyle}>
+                                Productos Mayor $9000
+                            </button>
                         </div>
+
                     </>
                 )}
 

@@ -414,6 +414,8 @@ main .boton-enviar a {
   background-color: black;
   width: 50%;
   margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 .cart-list {
