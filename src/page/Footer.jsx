@@ -34,31 +34,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-/*import React from 'react'
-import overolImage from '../imagenes/overol.jpg';
-
-const Footer = () => {
-    return (
-        <>
-            <footer>
-                <nav class="container-fluid">
-                    <ul>
-                        <li><Link to="/mainPage">Tienda</Link></li>
-                        <li><Link to="/servicios">Servicios</Link></li>
-                        <li><Link to="/proyectos">Proyectos</Link></li>
-                        <Link to="/">
-                            <img className="foto-pie" src={overolImage} alt="overol footer" />
-                        </Link>
-                        <li><Link to="/nosotros">Nosotros</Link></li>
-                        <li><Link to="/contacto">Contacto</Link></li>
-                    </ul>
-                </nav>
-            </footer>
-        </>
-    )
-}
-
-export default Footer*/

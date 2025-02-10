@@ -406,6 +406,44 @@ main .boton-enviar a {
   text-decoration: none;
 }
 
+/* ESTILOS DEL CART */
+.cart {
+  padding: 20px;
+  border: 1px solid #68E717;
+  border-radius: 10px;
+  background-color: black;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.cart-list {
+  list-style-type: none;
+  padding: 0;
+  color: black;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #68E717;
+  border-radius: 5px;
+  background-color: #fff
+}
+
+.cart-button {
+  background-color: black;
+  color: #68E717;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
 @media (max-width: 762px) {
   header nav div .foto-inicio {
     max-width: 50px;
