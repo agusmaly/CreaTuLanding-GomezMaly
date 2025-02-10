@@ -83,8 +83,8 @@ service cloud.firestore {
 ```
 
 ### URL del Deploy en Producción
-El proyecto está desplegado en Versel, podés acceder a la aplicación en el siguiente URL:
-- **[URL Versel](hhttps://overoltienda-5x46z9ez0-agusmalys-projects.vercel.app/mainPage)**
+El proyecto está desplegado en Vercel, podés acceder a la aplicación en el siguiente URL:
+- **[URL Vercel](hhttps://overoltienda-5x46z9ez0-agusmalys-projects.vercel.app/mainPage)**
 
 ## Contribución
 
@@ -95,3 +95,5 @@ El proyecto está desplegado en Versel, podés acceder a la aplicación en el si
 3. Realiza los cambios y haz commit (`git commit -m 'Añadida nueva funcionalidad'`).
 4. Haz push a tu rama (`git push origin feature/nueva-funcionalidad`).
 5. Crea un Pull Request.
+
+##
