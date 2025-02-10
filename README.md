@@ -85,7 +85,7 @@ service cloud.firestore {
 ### URL del Deploy en Producción
 El proyecto está desplegado en Vercel, podés acceder a la aplicación en el siguiente URL:
 - **[URL Vercel]**
-https://overoltienda-5x46z9ez0-agusmalys-projects.vercel.app/mainPage
+https://overoltienda-5x46z9ez0-agusmalys-projects.vercel.app/
 
 ## Contribución
 
