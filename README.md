@@ -83,9 +83,11 @@ service cloud.firestore {
 ```
 
 ### URL del Deploy en Producción
-El proyecto está desplegado en Vercel, podés acceder a la aplicación en el siguiente URL:
+El proyecto está desplegado en Vercel y Netlify, podés acceder a la aplicación en los siguientes URL:
 - **[URL Vercel]**
 https://overoltienda-5x46z9ez0-agusmalys-projects.vercel.app/
+- **[URL Netlify]**
+https://euphonious-faun-72680b.netlify.app/
 
 ## Contribución
 
